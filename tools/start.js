@@ -29,7 +29,7 @@ task('start', () => new Promise(resolve => {
 
   browserSync({
     server: {
-      baseDir: 'static',
+      baseDir: 'src/static',
 
       middleware: [
         webpackDevMiddleware(bundler, {
