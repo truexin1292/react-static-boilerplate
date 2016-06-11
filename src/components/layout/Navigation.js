@@ -14,11 +14,11 @@ import { Link } from 'react-app';
 class Navigation extends React.Component {
 
   componentDidMount() {
-    window.componentHandler.upgradeElement(this.refs.root);
+    this.refs.root;
   }
 
   componentWillUnmount() {
-    window.componentHandler.downgradeElements(this.refs.root);
+    this.refs.root;
   }
 
   render() {
@@ -33,4 +33,4 @@ class Navigation extends React.Component {
 
 }
 
-export default Navigation;
+module.exports = Navigation;

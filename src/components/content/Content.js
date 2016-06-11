@@ -25,4 +25,4 @@ Content.propTypes = {
   html: React.PropTypes.string.isRequired,
 };
 
-export default Content;
+module.exports = Content;

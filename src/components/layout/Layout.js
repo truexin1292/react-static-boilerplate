@@ -15,11 +15,11 @@ import s from './Layout.css';
 class Layout extends React.Component {
 
   componentDidMount() {
-    window.componentHandler.upgradeElement(this.refs.root);
+    this.refs.root;
   }
 
   componentWillUnmount() {
-    window.componentHandler.downgradeElements(this.refs.root);
+    this.refs.root;
   }
 
   render() {
@@ -34,4 +34,4 @@ class Layout extends React.Component {
   }
 }
 
-export default Layout;
+module.exports = Layout;

@@ -24,4 +24,4 @@ const store = createStore((state, action) => {
   }
 });
 
-export default store;
+module.exports = store;

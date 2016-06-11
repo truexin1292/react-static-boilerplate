@@ -10,7 +10,7 @@
 
 import { Content } from '../../components';
 
-export default {
+const home = {
 
   path: '/',
 
@@ -32,3 +32,5 @@ export default {
   },
 
 };
+
+module.exports = home;

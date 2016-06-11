@@ -14,11 +14,11 @@ import Navigation from './Navigation';
 class Header extends React.Component {
 
   componentDidMount() {
-    window.componentHandler.upgradeElement(this.refs.root);
+    this.refs.root;
   }
 
   componentWillUnmount() {
-    window.componentHandler.downgradeElements(this.refs.root);
+    this.refs.root;
   }
 
   render() {
@@ -35,4 +35,4 @@ class Header extends React.Component {
 
 }
 
-export default Header;
+module.exports = Header;

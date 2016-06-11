@@ -10,7 +10,7 @@
 
 import { Content } from '../../components';
 
-export default {
+const about = {
 
   path: '/about',
 
@@ -32,3 +32,5 @@ export default {
   },
 
 };
+
+module.exports = about;

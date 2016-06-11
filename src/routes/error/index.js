@@ -27,7 +27,7 @@ ErrorPage.propTypes = {
   stackTrace: React.PropTypes.string.isRequired,
 };
 
-export default {
+const error = {
 
   path: '/error',
 
@@ -51,3 +51,5 @@ export default {
   },
 
 };
+
+module.exports = error;

@@ -11,7 +11,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const extend = require('extend');
-const pkg = require('../package.json');
 
 const DEBUG = !(process.argv.slice(2) == '--release' || process.argv.slice(2) == '-r');
 const VERBOSE = process.argv.slice(2) == '--verbose' || process.argv.slice(2) == '-v';
@@ -86,7 +85,26 @@ const config = {
           path.resolve(__dirname, '../src/routes'),
         ],
         loader: 'babel-loader',
-        query: extend({}, pkg.babel, { babelrc: false }),
+        query: {
+          // https://github.com/babel/babel-loader#options
+          cacheDirectory: DEBUG,
+
+          // https://babeljs.io/docs/usage/options/
+          babelrc: false,
+          presets: [
+            'react',
+            'es2015-loose',
+            'stage-0',
+          ],
+          plugins: [
+            'transform-runtime',
+            ...DEBUG ? [] : [
+              'transform-react-remove-prop-types',
+              'transform-react-constant-elements',
+              'transform-react-inline-elements',
+            ],
+          ],
+        },
       },
       {
         test: /\.css/,

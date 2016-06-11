@@ -7,8 +7,10 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE.txt file in the root directory of this source tree.
  */
-
+import 'es5-shim';
+import 'es5-shim/es5-sham';
 import 'babel-polyfill';
+
 import 'whatwg-fetch';
 import { createApp } from 'react-app';
 import store from './store';
