@@ -93,7 +93,7 @@ const config = {
           babelrc: false,
           presets: [
             'react',
-            'es2015-loose',
+            'es2015',
             'stage-0',
           ],
           plugins: [
@@ -147,6 +147,12 @@ const config = {
         loader: 'file-loader',
       },
     ],
+    postLoaders: [
+      {
+        test: /\.js$/,
+        loaders: ['es3ify-loader']
+      }
+    ]
   },
 
   // The list of plugins for PostCSS
