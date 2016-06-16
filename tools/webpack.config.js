@@ -35,7 +35,12 @@ const config = {
   context: path.resolve(__dirname, '../src'),
 
   // The entry point for the bundle
-  entry: ['./core/app.js'],
+  entry: [
+    'es5-shim',
+    'es5-shim/es5-sham',
+    'babel-polyfill',
+    './main.js'
+  ],
 
   // Options affecting the output of the compilation
   output: {
@@ -81,8 +86,11 @@ const config = {
         test: /\.jsx?$/,
         include: [
           path.resolve(__dirname, '../src/components'),
-          path.resolve(__dirname, '../src/core'),
+          path.resolve(__dirname, '../src/containers'),
+          path.resolve(__dirname, '../src/layouts'),
           path.resolve(__dirname, '../src/routes'),
+          path.resolve(__dirname, '../src/store'),
+          path.resolve(__dirname, '../src/main'),
         ],
         loader: 'babel-loader',
         query: {

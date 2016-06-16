@@ -1,27 +1,36 @@
-/**
- * React Static Boilerplate
- * https://github.com/koistya/react-static-boilerplate
- *
- * Copyright © 2015-2016 Konstantin Tarkus (@koistya)
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
+// We only need to import the modules necessary for initial render
+import CoreLayout from '../layouts/CoreLayout/CoreLayout'
+import Home from './Home'
+import CounterRoute from './Counter'
 
-import home from './home';
-import about from './about';
-import error from './error';
+/*  Note: Instead of using JSX, we recommend using react-router
+    PlainRoute objects to build route definitions.   */
 
-const routes = {
-
+export const createRoutes = (store) => ({
   path: '/',
+  component: CoreLayout,
+  indexRoute: Home,
+  childRoutes: [
+    CounterRoute(store)
+  ]
+})
 
-  children: [
-    home,
-    about,
-    error,
-  ],
+/*  Note: childRoutes can be chunked or otherwise loaded programmatically
+    using getChildRoutes with the following signature:
 
-};
+    getChildRoutes (location, cb) {
+      require.ensure([], (require) => {
+        cb(null, [
+          // Remove imports!
+          require('./Counter').default(store)
+        ])
+      })
+    }
 
-module.exports = routes;
+    However, this is not necessary for code-splitting! It simply provides
+    an API for async route definitions. Your code splitting should occur
+    inside the route `getComponent` function, since it is only invoked
+    when the route exists and matches.
+*/
+
+export default createRoutes

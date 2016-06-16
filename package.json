@@ -37,12 +37,8 @@
     "fastclick": "^1.0.6",
     "fbjs": "^0.8.2",
     "file-loader": "^0.8.5",
-    "front-matter": "^2.0.7",
-    "git-repository": "^0.1.4",
-    "highlight.js": "^9.4.0",
     "history": "^2.1.1",
     "json-loader": "^0.5.4",
-    "markdown-it": "^6.0.2",
     "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
     "pixrem": "^3.0.0",
@@ -64,9 +60,11 @@
     "react-dom": "^0.14.8",
     "react-hot-loader": "^3.0.0-beta.2",
     "react-redux": "^4.4.5",
+    "react-router": "^2.4.1",
     "react-router-redux": "^4.0.5",
+    "redbox-react": "^1.2.6",
     "redux": "^3.5.2",
-    "s3": "^4.4.0",
+    "redux-thunk": "^2.1.0",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.1",
     "stylelint": "^6.4.1",
@@ -74,8 +72,7 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.13.0",
     "webpack-dev-middleware": "^1.6.1",
-    "webpack-hot-middleware": "^2.10.0",
-    "whatwg-fetch": "^1.0.0"
+    "webpack-hot-middleware": "^2.10.0"
   },
   "eslintConfig": {
     "parser": "babel-eslint",
@@ -96,7 +93,6 @@
     "clean": "node tools/clean",
     "build": "node tools/build --release",
     "build:debug": "node tools/build",
-    "deploy": "node tools/deploy.gh --release",
     "start": "node tools/start"
   }
 }

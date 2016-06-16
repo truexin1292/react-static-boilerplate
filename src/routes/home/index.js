@@ -1,36 +1,6 @@
-/**
- * React Static Boilerplate
- * https://github.com/koistya/react-static-boilerplate
- *
- * Copyright © 2015-2016 Konstantin Tarkus (@koistya)
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
+import HomeView from './components/HomeView'
 
-import { Content } from '../../components';
-
-const home = {
-
-  path: '/',
-
-  async action() {
-    return new Promise((resolve, reject) => {
-      require.ensure([], require => {
-        try {
-          const content = require('./index.md');
-          resolve({
-            title: content.title,
-            component: Content,
-            props: content,
-          });
-        } catch (err) {
-          reject(err);
-        }
-      });
-    });
-  },
-
-};
-
-module.exports = home;
+// Sync route definition
+export default {
+  component: HomeView
+}
