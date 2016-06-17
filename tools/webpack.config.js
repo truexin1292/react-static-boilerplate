@@ -101,8 +101,8 @@ const config = {
           babelrc: false,
           presets: [
             'react',
-            'es2015',
-            'stage-0',
+            'es2015-loose',
+            'stage-1',
           ],
           plugins: [
             'transform-runtime',
@@ -143,10 +143,6 @@ const config = {
         loader: 'json-loader',
       },
       {
-        test: /\.md$/,
-        loader: path.resolve(__dirname, './webpack.markdown-loader.js'),
-      },
-      {
         test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
         loader: 'url-loader?limit=10000',
       },
@@ -154,12 +150,6 @@ const config = {
         test: /\.(eot|ttf|wav|mp3)$/,
         loader: 'file-loader',
       },
-    ],
-    postLoaders: [
-      {
-        test: /\.js$/,
-        loaders: ['es3ify-loader']
-      }
     ]
   },
 
