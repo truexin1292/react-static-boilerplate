@@ -14,9 +14,9 @@
 ### Features
 
 &nbsp; &nbsp; ✓ Modern JavaScript syntax ([ES2015](http://babeljs.io/docs/learn-es2015/)+) via [Babel](http://babeljs.io/)<br>
-&nbsp; &nbsp; ✓ Modern CSS syntax (CSS3+) via [PostCSS](https://github.com/postcss/postcss)<br>
+&nbsp; &nbsp; ✓ Modern CSS/SCSS syntax (CSS3+) via [PostCSS](https://github.com/postcss/postcss)<br>
 &nbsp; &nbsp; ✓ Application state management via [Redux](http://redux.js.org/)<br>
-&nbsp; &nbsp; ✓ Routing and navigation via [React App](https://github.com/kriasoft/react-app), [Universal Router](https://github.com/kriasoft/universal-router), [History](https://github.com/mjackson/history)<br>
+&nbsp; &nbsp; ✓ Routing and navigation via [React Router](https://github.com/reactjs/react-router), [React Router Redux](https://github.com/reactjs/react-router-redux), [History](https://github.com/mjackson/history)<br>
 &nbsp; &nbsp; ✓ Modular styles via [CSS Modules](https://github.com/css-modules/css-modules)<br>
 &nbsp; &nbsp; ✓ [Code-splitting](https://github.com/webpack/docs/wiki/code-splitting) and async chunk loading<br>
 &nbsp; &nbsp; ✓ Hot Module Replacement ([HMR](https://webpack.github.io/docs/hot-module-replacement.html)) /w [React Hot Loader](http://gaearon.github.io/react-hot-loader/)<br>
@@ -26,7 +26,7 @@
 &nbsp; &nbsp; ✓ [Yeoman](http://yeoman.io/) generator ([generator-react-static](https://www.npmjs.com/package/generator-react-static))<br>
 &nbsp; &nbsp; ✓ 24/7 community support on [Gitter](https://gitter.im/koistya/react-static-boilerplate) or [StackOverflow](http://stackoverflow.com/questions/tagged/react-starter-kit)<br>
 &nbsp; &nbsp; ✓ Customization requests on [Codementor](https://www.codementor.io/koistya)<br>
-
+&nbsp; &nbsp; ✓ IE8 Support
 
 ### Sponsors
 
