@@ -129,14 +129,7 @@ const config = {
         test: /\.scss$/,
         loaders: [
           'style-loader',
-          `css-loader?${JSON.stringify({
-            sourceMap: DEBUG,
-            // CSS Modules https://github.com/css-modules/css-modules
-            modules: true,
-            localIdentName: DEBUG ? '[name]_[local]_[hash:base64:3]' : '[hash:base64:4]',
-            // CSS Nano http://cssnano.co/options/
-            minimize: !DEBUG,
-          })}`,
+          `css-loader?${JSON.stringify({ sourceMap: DEBUG, minimize: !DEBUG })}`,
           'postcss-loader?pack=sass',
           'sass-loader',
         ],
@@ -147,11 +140,18 @@ const config = {
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
-        loader: 'url-loader?limit=10000',
+        loader: 'url-loader',
+        query: {
+          name: DEBUG ? '[path][name].[ext]?[hash]' : '[hash].[ext]',
+          limit: 10000,
+        },
       },
       {
         test: /\.(eot|ttf|wav|mp3)$/,
         loader: 'file-loader',
+        query: {
+          name: DEBUG ? '[path][name].[ext]?[hash]' : '[hash].[ext]',
+        },
       },
     ]
   },
