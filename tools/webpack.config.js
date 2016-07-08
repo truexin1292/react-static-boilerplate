@@ -12,8 +12,8 @@ const path = require('path');
 const webpack = require('webpack');
 const extend = require('extend');
 
-const DEBUG = !(process.argv.slice(2) == '--release' || process.argv.slice(2) == '-r');
-const VERBOSE = process.argv.slice(2) == '--verbose' || process.argv.slice(2) == '-v';
+const DEBUG = !(process.argv.slice(2) == '--release');
+const VERBOSE = process.argv.slice(2) == '--verbose';
 const AUTOPREFIXER_BROWSERS = [
   'Android 2.3',
   'Android >= 4',
@@ -52,6 +52,7 @@ const config = {
 
   // Switch loaders to debug or release mode
   debug: DEBUG,
+  cache: DEBUG,
 
   // Developer tool to enhance debugging, source maps
   // http://webpack.github.io/docs/configuration.html#devtool
@@ -85,12 +86,7 @@ const config = {
       {
         test: /\.jsx?$/,
         include: [
-          path.resolve(__dirname, '../src/components'),
-          path.resolve(__dirname, '../src/containers'),
-          path.resolve(__dirname, '../src/layouts'),
-          path.resolve(__dirname, '../src/routes'),
-          path.resolve(__dirname, '../src/store'),
-          path.resolve(__dirname, '../src/main'),
+          path.resolve(__dirname, '../src'),
         ],
         loader: 'babel-loader',
         query: {
