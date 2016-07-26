@@ -1,6 +1,7 @@
 // We only need to import the modules necessary for initial render
 import Layout from '../components/Layout'
 import Home from './Home'
+import NotFound from './NotFound'
 import CounterRoute from './Counter'
 
 /*  Note: Instead of using JSX, we recommend using react-router
@@ -11,6 +12,7 @@ export const createRoutes = (store) => ({
   component: Layout,
   indexRoute: Home,
   childRoutes: [
+    NotFound,
     CounterRoute(store)
   ]
 })
