@@ -39,6 +39,9 @@ const config = {
     'es5-shim',
     'es5-shim/es5-sham',
     'babel-polyfill',
+    'es6-promise',
+    'fetch-detector',
+    'fetch-ie8',
     './main.js'
   ],
 
