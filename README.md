@@ -23,9 +23,6 @@
 &nbsp; &nbsp; ✓ Bundling and optimization with [Webpack](https://webpack.github.io/)<br>
 &nbsp; &nbsp; ✓ Cross-device testing with [Browsersync](https://browsersync.io/)<br>
 &nbsp; &nbsp; ✓ Easy deployment to [GitHub Pages](https://pages.github.com/), [Amazon S3](http://davidwalsh.name/hosting-website-amazon-s3) or [Firebase](https://www.firebase.com/)<br>
-&nbsp; &nbsp; ✓ [Yeoman](http://yeoman.io/) generator ([generator-react-static](https://www.npmjs.com/package/generator-react-static))<br>
-&nbsp; &nbsp; ✓ 24/7 community support on [Gitter](https://gitter.im/koistya/react-static-boilerplate) or [StackOverflow](http://stackoverflow.com/questions/tagged/react-starter-kit)<br>
-&nbsp; &nbsp; ✓ Customization requests on [Codementor](https://www.codementor.io/koistya)<br>
 &nbsp; &nbsp; ✓ IE8 Support
 
 ### Directory Layout
@@ -101,57 +98,13 @@ $ npm install
 ```
 
 
-### Backers
-
-Love **React Static Boilerplate** work and community? Help us keep it alive by [donating funds](https://opencollective.com/react-static-boilerplate#support) to cover project expenses!
-
-<a href="https://opencollective.com/react-static-boilerplate/backer/0/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/backer/0/avatar.svg" height="64">
-</a>
-<a href="https://opencollective.com/react-static-boilerplate/backer/1/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/backer/1/avatar.svg" height="64">
-</a>
-<a href="https://opencollective.com/react-static-boilerplate/backer/2/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/backer/2/avatar.svg" height="64">
-</a>
-<a href="https://opencollective.com/react-static-boilerplate/backer/3/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/backer/3/avatar.svg" height="64">
-</a>
-<a href="https://opencollective.com/react-static-boilerplate/backer/4/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/backer/4/avatar.svg" height="64">
-</a>
-<a href="https://opencollective.com/react-static-boilerplate/backer/5/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/backer/5/avatar.svg" height="64">
-</a>
-<a href="https://opencollective.com/react-static-boilerplate/backer/6/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/backer/6/avatar.svg" height="64">
-</a>
-<a href="https://opencollective.com/react-static-boilerplate/backer/7/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/backer/7/avatar.svg" height="64">
-</a>
-<a href="https://opencollective.com/react-static-boilerplate/backer/8/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/backer/8/avatar.svg" height="64">
-</a>
-<a href="https://opencollective.com/react-static-boilerplate/backer/9/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/backer/9/avatar.svg" height="64">
-</a>
-<a href="https://opencollective.com/react-static-boilerplate/backer/10/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/backer/10/avatar.svg" height="64">
-</a>
-<a href="https://opencollective.com/react-static-boilerplate/backer/11/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/backer/11/avatar.svg" height="64">
-</a>
-<a href="https://opencollective.com/react-static-boilerplate/backer/12/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/backer/12/avatar.svg" height="64">
-</a>
-
-
 ### Related Projects
 
 * [React Starter Kit](https://github.com/kriasoft/react-starter-kit) — Isomorphic web app boilerplate (Node.js, React, GraphQL, Webpack, CSS Modules)
 * [Babel Starter Kit](https://github.com/kriasoft/babel-starter-kit) — JavaScript library boilerplate (ES2015, Babel, Rollup, Mocha, Chai, Sinon, Rewire)
-* [React App](https://github.com/kriasoft/react-app) — Bootstrap React app with routing, navigation, context variables and title/meta management
-* [Universal Router](https://github.com/kriasoft/universal-router) — Isomorphic router for web and single-page applications (SPA)
+* [Redux](http://redux.js.org/) — Redux is a predictable state container for JavaScript apps.
+* [React Router](https://github.com/reactjs/react-router) — Declarative routing for React
+* [React Router Redux](https://github.com/reactjs/react-router-redux) — Ruthlessly simple bindings to keep react-router and redux in sync
 * [History](https://github.com/mjackson/history) — HTML5 History API wrapper library
 * [Membership Database](https://github.com/membership/membership.db) — SQL schema boilerplate for user accounts, roles and auth tokens
 
