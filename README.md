@@ -106,8 +106,6 @@ $ npm install
 * [React Router](https://github.com/reactjs/react-router) — Declarative routing for React
 * [React Router Redux](https://github.com/reactjs/react-router-redux) — Ruthlessly simple bindings to keep react-router and redux in sync
 * [History](https://github.com/mjackson/history) — HTML5 History API wrapper library
-* [Membership Database](https://github.com/membership/membership.db) — SQL schema boilerplate for user accounts, roles and auth tokens
-
 
 ### Learn More
 
