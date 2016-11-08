@@ -57,10 +57,6 @@
 │   ├── /layout/                # Layout component
 │   ├── /button/                # Button component
 │   └── /...                    # etc.
-├── /core/                      # Core framework
-│   ├── /app.js                 # Application entry point (bootstrap)
-│   ├── /store.js               # Application state manager (Redux)
-│   └── /...                    # etc.
 ├── /routes/                    # View/screen UI components + routing information
 │   ├── /about/                 # About page
 │   ├── /error/                 # Error page
