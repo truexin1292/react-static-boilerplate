@@ -28,41 +28,23 @@
 &nbsp; &nbsp; ✓ Customization requests on [Codementor](https://www.codementor.io/koistya)<br>
 &nbsp; &nbsp; ✓ IE8 Support
 
-### Sponsors
-
-<a href="https://opencollective.com/react-static-boilerplate/sponsor/0/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/sponsor/0/avatar.svg" height="64">
-</a> &nbsp;
-<a href="https://opencollective.com/react-static-boilerplate/sponsor/1/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/sponsor/1/avatar.svg" height="64">
-</a> &nbsp;
-<a href="https://opencollective.com/react-static-boilerplate/sponsor/2/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/sponsor/2/avatar.svg" height="64">
-</a> &nbsp;
-<a href="https://opencollective.com/react-static-boilerplate/sponsor/3/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/sponsor/3/avatar.svg" height="64">
-</a> &nbsp;
-<a href="https://opencollective.com/react-static-boilerplate/sponsor/4/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/sponsor/4/avatar.svg" height="64">
-</a>
-
-
 ### Directory Layout
 
 ```shell
 .
 ├── /build/                     # The folder for compiled output
 ├── /node_modules/              # 3rd-party libraries and utilities
-├── /components/                # Shared/generic UI components
-│   ├── /layout/                # Layout component
-│   ├── /button/                # Button component
-│   └── /...                    # etc.
-├── /routes/                    # View/screen UI components + routing information
-│   ├── /about/                 # About page
-│   ├── /error/                 # Error page
-│   ├── /home/                  # Home page
-│   └── /...                    # etc.
-├── /static/                    # Static files such as favicon.ico etc.
+├── /src/
+    ├── /components/                # Shared/generic UI components
+    │   ├── /layout/                # Layout component
+    │   ├── /button/                # Button component
+    │   └── /...                    # etc.
+    ├── /routes/                    # View/screen UI components + routing information
+    │   ├── /about/                 # About page
+    │   ├── /error/                 # Error page
+    │   ├── /home/                  # Home page
+    │   └── /...                    # etc.
+    ├── /static/                    # Static files such as favicon.ico etc.
 ├── /test/                      # Unit and integration tests
 ├── /tools/                     # Build automation scripts and utilities
 │── LICENSE.txt                 # Licensing information
