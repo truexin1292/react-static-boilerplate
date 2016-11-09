@@ -44,7 +44,6 @@
     "history": "^2.1.1",
     "json-loader": "^0.5.4",
     "mocha": "^2.4.5",
-    "node-sass": "^3.4.2",
     "pixrem": "^3.0.0",
     "pleeease-filters": "^3.0.0",
     "postcss": "^5.0.21",
@@ -75,6 +74,16 @@
     "webpack": "^1.13.0",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "es2015",
+      "stage-1"
+    ],
+    "plugins": [
+      "transform-runtime"
+    ]
   },
   "eslintConfig": {
     "parser": "babel-eslint",

@@ -12,8 +12,8 @@ export const createRoutes = (store) => ({
   component: Layout,
   indexRoute: Home,
   childRoutes: [
+    CounterRoute(store),
     NotFound,
-    CounterRoute(store)
   ]
 })
 

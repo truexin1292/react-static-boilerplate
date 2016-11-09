@@ -14,7 +14,6 @@
 &nbsp; &nbsp; ✓ Hot Module Replacement ([HMR](https://webpack.github.io/docs/hot-module-replacement.html)) /w [React Hot Loader](http://gaearon.github.io/react-hot-loader/)<br>
 &nbsp; &nbsp; ✓ Bundling and optimization with [Webpack](https://webpack.github.io/)<br>
 &nbsp; &nbsp; ✓ Cross-device testing with [Browsersync](https://browsersync.io/)<br>
-&nbsp; &nbsp; ✓ Easy deployment to [GitHub Pages](https://pages.github.com/), [Amazon S3](http://davidwalsh.name/hosting-website-amazon-s3) or [Firebase](https://www.firebase.com/)<br>
 &nbsp; &nbsp; ✓ IE8 Support
 
 ### Directory Layout
@@ -67,13 +66,7 @@ $ npm test
 ```
 
 
-### How to Deploy
-
-```shell
-$ npm run deploy                # Deploys the project to GitHub Pages
-```
-
-Alternatively, you can build a production release to manually deploy to S3, Firebase, Netlify, and other static hosts. Simply run the command below and copy the generated `build` folder to your static host.
+### How to Build
 
 ```shell
 $ npm run build release         # Build production release 
