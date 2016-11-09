@@ -1,13 +1,5 @@
 # React Static Boilerplate
 
-[![NPM version](http://img.shields.io/npm/v/generator-react-static.svg?style=flat-square)](https://www.npmjs.com/package/generator-react-static)
-[![NPM downloads](http://img.shields.io/npm/dm/generator-react-static.svg?style=flat-square)](https://www.npmjs.com/package/generator-react-static)
-[![Build Status](http://img.shields.io/travis/koistya/react-static-boilerplate/master.svg?style=flat-square)](https://travis-ci.org/koistya/react-static-boilerplate)
-[![Dependency Status](http://img.shields.io/david/koistya/react-static-boilerplate.svg?branch=master&style=flat-square)](https://david-dm.org/koistya/react-static-boilerplate)
-[![GitHub Issues](https://img.shields.io/github/issues/koistya/react-static-boilerplate.svg?style=flat-square)](https://github.com/koistya/react-static-boilerplate/issues?q=is:open)
-[![To-do](https://img.shields.io/waffle/label/koistya/react-static-boilerplate/to-do.svg?style=flat-square)](https://waffle.io/koistya/react-static-boilerplate)
-[![In progress](https://img.shields.io/waffle/label/koistya/react-static-boilerplate/in%20progress.svg?style=flat-square)](https://waffle.io/koistya/react-static-boilerplate)
-
 > Static website starter kit powered by [React.js](http://facebook.github.io/react/) and [Webpack](http://webpack.github.io/)
 
 
@@ -32,16 +24,18 @@
 ├── /build/                     # The folder for compiled output
 ├── /node_modules/              # 3rd-party libraries and utilities
 ├── /src/
-    ├── /components/                # Shared/generic UI components
-    │   ├── /layout/                # Layout component
-    │   ├── /button/                # Button component
-    │   └── /...                    # etc.
-    ├── /routes/                    # View/screen UI components + routing information
-    │   ├── /about/                 # About page
-    │   ├── /error/                 # Error page
-    │   ├── /home/                  # Home page
-    │   └── /...                    # etc.
-    ├── /static/                    # Static files such as favicon.ico etc.
+    ├── /components/            # Shared/generic UI components
+    │   ├── /Layout/            # Layout component
+    │   ├── /Button/            # Button component
+    │   └── /...                # etc.
+    ├── /containers/            # containers
+    ├── /routes/                # View/screen UI components + routing information
+    │   ├── /About/             # About page
+    │   ├── /NotFound/          # Error page
+    │   ├── /Home/              # Home page
+    │   └── /...                # etc.
+    ├── /static/                # Static files such as favicon.ico etc.
+    ├── /store/                 # redux store
 ├── /test/                      # Unit and integration tests
 ├── /tools/                     # Build automation scripts and utilities
 │── LICENSE.txt                 # Licensing information
@@ -118,8 +112,5 @@ $ npm install
 
 ### License
 
-Copyright © 2015-2016 Konstantin Tarkus. This source code is licensed under the MIT license found in the
-[LICENSE.txt](https://github.com/koistya/react-static-boilerplate/blob/master/LICENSE.txt) file.
-
----
-Made with ♥ by Konstantin Tarkus ([@koistya](https://twitter.com/koistya)) and [contributors](https://github.com/koistya/react-static-boilerplate/graphs/contributors)
+This source code is licensed under the MIT license found in the
+[LICENSE.txt](https://github.com/jun0205/react-static-boilerplate/blob/master/LICENSE.txt) file.
