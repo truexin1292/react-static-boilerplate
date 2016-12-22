@@ -89,6 +89,7 @@ $ npm install
 
 * [React Starter Kit](https://github.com/kriasoft/react-starter-kit) — Isomorphic web app boilerplate (Node.js, React, GraphQL, Webpack, CSS Modules)
 * [Babel Starter Kit](https://github.com/kriasoft/babel-starter-kit) — JavaScript library boilerplate (ES2015, Babel, Rollup, Mocha, Chai, Sinon, Rewire)
+* [React Redux Starter Kit](https://github.com/davezuko/react-redux-starter-kit) — Get started with React, Redux, and React-Router!
 * [Redux](http://redux.js.org/) — Redux is a predictable state container for JavaScript apps.
 * [React Router](https://github.com/reactjs/react-router) — Declarative routing for React
 * [React Router Redux](https://github.com/reactjs/react-router-redux) — Ruthlessly simple bindings to keep react-router and redux in sync
