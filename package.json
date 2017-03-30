@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "name": "react-static-boilerplate",
   "engines": {
     "node": ">=5.0",
     "npm": ">=3.3"
@@ -10,6 +10,9 @@
     "babel-core": "^6.9.0",
     "babel-eslint": "^6.0.4",
     "babel-loader": "^6.2.4",
+    "babel-plugin-transform-es3-member-expression-literals": "^6.22.0",
+    "babel-plugin-transform-es3-modules-literals": "0.0.3",
+    "babel-plugin-transform-es3-property-literals": "^6.22.0",
     "babel-plugin-transform-react-constant-elements": "^6.8.0",
     "babel-plugin-transform-react-inline-elements": "^6.8.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.2.7",
@@ -60,7 +63,7 @@
     "postcss-selector-not": "^2.0.0",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
-    "react-hot-loader": "^3.0.0-beta.2",
+    "react-hot-loader": "^3.0.0-beta.6",
     "react-redux": "^4.4.5",
     "react-router": "2.3.0",
     "react-router-redux": "^4.0.5",
@@ -71,19 +74,9 @@
     "stylelint": "^6.4.1",
     "stylelint-config-standard": "^7.0.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.0",
+    "webpack": "1.13.2",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
-  },
-  "babel": {
-    "presets": [
-      "react",
-      "es2015",
-      "stage-1"
-    ],
-    "plugins": [
-      "transform-runtime"
-    ]
   },
   "eslintConfig": {
     "parser": "babel-eslint",

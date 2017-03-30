@@ -35,21 +35,26 @@ const config = {
   context: path.resolve(__dirname, '../src'),
 
   // The entry point for the bundle
-  entry: [
-    'es5-shim',
-    'es5-shim/es5-sham',
-    'babel-polyfill',
-    'es6-promise',
-    'fetch-detector',
-    'fetch-ie8',
-    './main.js'
-  ],
+  entry: {
+    app: [
+      'babel-polyfill',
+      './main.js'
+    ],
+    vendor: [
+      'es5-shim',
+      'es5-shim/es5-sham',
+      'es6-promise',
+      'fetch-detector',
+      'fetch-ie8',
+    ]
+  },
 
   // Options affecting the output of the compilation
   output: {
-    path: path.resolve(__dirname, '../build/assets'),
-    publicPath: '/assets/',
-    file: 'build/[name].js',
+    path: path.resolve(__dirname, '../build'),
+    publicPath: '/',
+    filename: 'assets/[name].js',
+    chunkFilename: 'assets/[name].js',
     sourcePrefix: '  ',
   },
 
@@ -77,9 +82,14 @@ const config = {
   // The list of plugins for Webpack compiler
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: "vendor",
+      minChunks: Infinity,
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': DEBUG ? '"development"' : '"production"',
       __DEV__: DEBUG,
+      __BASENAME__: JSON.stringify(process.env.BASENAME || '')
     }),
   ],
 
@@ -109,6 +119,9 @@ const config = {
               'transform-react-remove-prop-types',
               'transform-react-constant-elements',
               'transform-react-inline-elements',
+              'transform-es3-modules-literals',
+              'transform-es3-member-expression-literals',
+              'transform-es3-property-literals'
             ],
           ],
         },
@@ -145,7 +158,7 @@ const config = {
         test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
         loader: 'url-loader',
         query: {
-          name: DEBUG ? '[path][name].[ext]?[hash]' : '[hash].[ext]',
+          name: DEBUG ? 'assets/[path][name].[ext]?[hash]' : '[hash].[ext]',
           limit: 10000,
         },
       },
@@ -153,7 +166,7 @@ const config = {
         test: /\.(eot|ttf|wav|mp3)$/,
         loader: 'file-loader',
         query: {
-          name: DEBUG ? '[path][name].[ext]?[hash]' : '[hash].[ext]',
+          name: DEBUG ? 'assets/[path][name].[ext]?[hash]' : '[hash].[ext]',
         },
       },
     ]

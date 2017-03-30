@@ -57,6 +57,13 @@ $ npm start             # Build and launch the app, same as "node tools/start.js
 
 **NODE**: Make sure that you have [Node.js](https://nodejs.org/) v6 installed on your local machine.
 
+### IE8 Support Version
+
+&nbsp; &nbsp; react <= 0.14.8<br>
+&nbsp; &nbsp; react-dom <= 0.14.8<br>
+&nbsp; &nbsp; react-router <= 2.3.0<br>
+&nbsp; &nbsp; webpack <= 1.13.2  [IE8 下访问webpack.UglifyJsPlugin 压缩的代码出错](https://github.com/SamHwang1990/blog/issues/6)<br>
+
 ### How to Test
 
 The unit tests are powered by [chai](http://chaijs.com/) and [mocha](http://mochajs.org/).
@@ -69,7 +76,7 @@ $ npm test
 ### How to Build
 
 ```shell
-$ npm run build release         # Build production release 
+$ npm run build         # Build production release 
 ```
 
 

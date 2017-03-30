@@ -18,7 +18,7 @@ const config = require('./webpack.config');
 task('start', () => new Promise(resolve => {
   // Hot Module Replacement (HMR) + React Hot Reload
   if (config.debug) {
-    config.entry.unshift('react-hot-loader/patch', 'webpack-hot-middleware/client');
+    config.entry.vendor.unshift('react-hot-loader/patch', 'webpack-hot-middleware/client');
     config.module.loaders.find(x => x.loader === 'babel-loader')
       .query.plugins.unshift('react-hot-loader/babel');
     config.plugins.push(new webpack.HotModuleReplacementPlugin());
