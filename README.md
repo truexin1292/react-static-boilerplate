@@ -14,8 +14,7 @@
 &nbsp; &nbsp; ✓ Hot Module Replacement ([HMR](https://webpack.github.io/docs/hot-module-replacement.html)) /w [React Hot Loader](http://gaearon.github.io/react-hot-loader/)<br>
 &nbsp; &nbsp; ✓ Bundling and optimization with [Webpack](https://webpack.github.io/)<br>
 &nbsp; &nbsp; ✓ Cross-device testing with [Browsersync](https://browsersync.io/)<br>
-&nbsp; &nbsp; ✓ IE8 Support
-
+&nbsp; &nbsp; ✓ IE8 Support (Need to build after)
 ### Directory Layout
 
 ```shell
