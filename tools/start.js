@@ -28,6 +28,8 @@ task('start', () => new Promise(resolve => {
   const bundler = webpack(config);
 
   browserSync({
+    port: Number(process.env.PORT || 3000),
+    ui: { port: Number(process.env.PORT || 3000) + 1 },
     server: {
       baseDir: 'src/static',
 
