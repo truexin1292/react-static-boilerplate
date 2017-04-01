@@ -61,7 +61,7 @@ $ npm start             # Build and launch the app, same as "node tools/start.js
 &nbsp; &nbsp; react <= 0.14.8<br>
 &nbsp; &nbsp; react-dom <= 0.14.8<br>
 &nbsp; &nbsp; react-router <= 2.3.0<br>
-&nbsp; &nbsp; webpack <= 1.13.2  [IE8 下访问webpack.UglifyJsPlugin 压缩的代码出错](https://github.com/SamHwang1990/blog/issues/6)<br>
+&nbsp; &nbsp; webpack = webpack/webpack#8d5ed06
 
 ### How to Test
 
