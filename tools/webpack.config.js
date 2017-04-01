@@ -36,14 +36,14 @@ const config = {
 
   // The entry point for the bundle
   entry: {
-    app: [
-      'babel-polyfill',
+    app: [      
       './main.js'
     ],
     vendor: [
       'es5-shim',
       'es5-shim/es5-sham',
       'es6-promise',
+      'babel-polyfill',
       'fetch-detector',
       'fetch-ie8',
     ]
@@ -227,7 +227,11 @@ const config = {
 // Optimize the bundle in release (production) mode
 if (!DEBUG) {
   config.plugins.push(new webpack.optimize.DedupePlugin());
-  config.plugins.push(new webpack.optimize.UglifyJsPlugin({ compress: { warnings: VERBOSE } }));
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
+    compress: { warnings: VERBOSE, screw_ie8: false },
+    mangle: { screw_ie8: false },
+    output: { screw_ie8: false }
+  }));
   config.plugins.push(new webpack.optimize.AggressiveMergingPlugin());
 }
 
