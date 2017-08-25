@@ -8,11 +8,11 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-const cpy = require('cpy');
-const task = require('./task');
+const task = require('./task')
+const fs = require('fs-extra')
 
 /**
  * Copies static files such as robots.txt, favicon.ico to the
  * output (build) folder.
  */
-module.exports = task('copy', cpy(['src/static/**/*.*'], 'build'));
+module.exports = task('copy', fs.copy('./src/static', './build/static'))
