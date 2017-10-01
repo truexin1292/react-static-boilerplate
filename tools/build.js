@@ -8,10 +8,10 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-const task = require('./task');
+const task = require('./task')
 
 module.exports = task('build', () => Promise.resolve()
   .then(() => require('./clean'))
   .then(() => require('./copy'))
   .then(() => require('./bundle'))
-);
+)

@@ -3,7 +3,7 @@ import Header from '../Header'
 import classes from './Layout.css'
 
 export const CoreLayout = ({ children }) => (
-  <div className='container text-center'>
+  <div className="container text-center">
     <Header />
     <div className={classes.mainContainer}>
       {children}
@@ -12,7 +12,7 @@ export const CoreLayout = ({ children }) => (
 )
 
 CoreLayout.propTypes = {
-  children: React.PropTypes.element.isRequired
+  children: React.PropTypes.element.isRequired,
 }
 
 export default CoreLayout

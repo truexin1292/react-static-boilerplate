@@ -58,8 +58,8 @@ $ npm start             # Build and launch the app, same as "node tools/start.js
 
 ### IE8 Support Version
 
-&nbsp; &nbsp; react <= 0.14.8<br>
-&nbsp; &nbsp; react-dom <= 0.14.8<br>
+&nbsp; &nbsp; react <= 0.14.8 or <= 15.0.2<br>
+&nbsp; &nbsp; react-dom <= 0.14.8 or <= 15.0.2<br>
 &nbsp; &nbsp; react-router <= 2.3.0<br>
 &nbsp; &nbsp; webpack = 1.15.0
 

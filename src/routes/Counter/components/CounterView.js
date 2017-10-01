@@ -6,8 +6,19 @@ export const CounterView = (props) => (
     <Counter
       counter={props.counter}
       doubleAsync={props.doubleAsync}
-      increment={props.increment} />
+      increment={props.increment}
+    />
   </div>
 )
+
+CounterView.defaultProps = {
+  counter: 0,
+}
+
+CounterView.propTypes = {
+  counter: React.PropTypes.number,
+  doubleAsync: React.PropTypes.func,
+  increment: React.PropTypes.func,
+}
 
 export default CounterView

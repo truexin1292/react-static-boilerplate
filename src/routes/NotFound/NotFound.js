@@ -10,7 +10,7 @@ const goBack = (e) => {
 export const NotFound = () => (
   <div className={classes.notFound}>
     <h4>Page not found!</h4>
-    <p><a href='#' onClick={goBack}>&larr; Back</a></p>
+    <p><a href="#" onClick={goBack}>&larr; Back</a></p>
   </div>
 )
 

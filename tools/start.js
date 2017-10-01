@@ -8,39 +8,44 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-const browserSync = require('browser-sync');
-const webpack = require('webpack');
-const webpackDevMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware');
-const task = require('./task');
-const config = require('./webpack.config');
+const path = require('path')
+const browserSync = require('browser-sync')
+const webpack = require('webpack')
+const webpackDevMiddleware = require('webpack-dev-middleware')
+const webpackHotMiddleware = require('webpack-hot-middleware')
+const task = require('./task')
+const webpackConfig = require('../webpack.config')
 
 task('start', () => new Promise(resolve => {
   // Hot Module Replacement (HMR) + React Hot Reload
-  if (config.debug) {
-    config.entry.vendor.unshift('react-hot-loader/patch', 'webpack-hot-middleware/client');
-    config.module.loaders.find(x => x.loader === 'babel-loader')
-      .query.plugins.unshift('react-hot-loader/babel');
-    config.plugins.push(new webpack.HotModuleReplacementPlugin());
-    config.plugins.push(new webpack.NoErrorsPlugin());
+  if (webpackConfig.debug) {
+    webpackConfig.entry.vendor
+      .unshift('react-hot-loader/patch', 'webpack-hot-middleware/client')
+    webpackConfig.module.loaders
+      .find(x => x.loader === 'babel-loader').query.plugins
+      .unshift('react-hot-loader/babel')
+    webpackConfig.plugins.push(new webpack.HotModuleReplacementPlugin())
+    webpackConfig.plugins.push(new webpack.NoErrorsPlugin())
   }
 
-  const bundler = webpack(config);
+  const bundler = webpack(webpackConfig)
 
   browserSync({
     port: Number(process.env.PORT || 3000),
-    ui: { port: Number(process.env.PORT || 3000) + 1 },
+    ui: {
+      port: Number(process.env.PORT || 3000) + 1,
+    },
     server: {
-      baseDir: 'src/static',
+      baseDir: './src',
 
       middleware: [
         webpackDevMiddleware(bundler, {
-          // IMPORTANT: dev middleware can't access config, so we should
+          // IMPORTANT: dev middleware can't access webpackConfig, so we should
           // provide publicPath by ourselves
-          publicPath: config.output.publicPath,
+          publicPath: webpackConfig.output.publicPath,
 
           // pretty colored output
-          stats: config.stats,
+          stats: webpackConfig.stats,
 
           // for other settings see
           // http://webpack.github.io/docs/webpack-dev-middleware.html
@@ -51,10 +56,15 @@ task('start', () => new Promise(resolve => {
 
         // Serve index.html for all unknown requests
         (req, res, next) => {
-          if (req.headers.accept.startsWith('text/html')) {
-            req.url = '/index.html'; // eslint-disable-line no-param-reassign
-          }
-          next();
+          const filename = path.join(bundler.outputPath, 'index.html')
+          bundler.outputFileSystem.readFile(filename, (err, result) => {
+            if (err) {
+              next(err)
+              return
+            }
+            res.setHeader('content-type', 'text/html')
+            res.end(result)
+          })
         },
       ],
     },
@@ -65,7 +75,7 @@ task('start', () => new Promise(resolve => {
       'build/**/*.css',
       'build/**/*.html',
     ],
-  });
+  })
 
-  resolve();
-}));
+  resolve()
+}))

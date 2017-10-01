@@ -1,3 +1,6 @@
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable no-undef */
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import createBrowserHistory from 'history/lib/createBrowserHistory'
@@ -10,7 +13,7 @@ import AppContainer from './containers/AppContainer'
 // Browser History Setup
 // ========================================================
 const browserHistory = useRouterHistory(createBrowserHistory)({
-  basename: __BASENAME__
+  basename: __BASENAME__,
 })
 
 // ========================================================
@@ -23,7 +26,7 @@ const browserHistory = useRouterHistory(createBrowserHistory)({
 const initialState = window.___INITIAL_STATE__
 const store = createStore(initialState, browserHistory)
 const history = syncHistoryWithStore(browserHistory, store, {
-  selectLocationState: (state) => state.router
+  selectLocationState: (state) => state.router,
 })
 
 // ========================================================

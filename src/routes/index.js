@@ -2,7 +2,7 @@
 import Layout from '../components/Layout'
 import Home from './Home'
 import NotFound from './NotFound'
-import CounterRoute from './Counter'
+import counterRoute from './Counter'
 
 /*  Note: Instead of using JSX, we recommend using react-router
     PlainRoute objects to build route definitions.   */
@@ -12,9 +12,9 @@ export const createRoutes = (store) => ({
   component: Layout,
   indexRoute: Home,
   childRoutes: [
-    CounterRoute(store),
+    counterRoute(store),
     NotFound,
-  ]
+  ],
 })
 
 /*  Note: childRoutes can be chunked or otherwise loaded programmatically

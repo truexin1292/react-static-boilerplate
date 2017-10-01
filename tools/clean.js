@@ -8,7 +8,9 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-const del = require('del');
-const task = require('./task');
+const del = require('del')
+const task = require('./task')
 
-module.exports = task('clean', () => del(['build/*', '!build/.git'], { dot: true }));
+module.exports = task('clean', () =>
+  del(['./build/*', '!./build/.git'], { dot: true })
+)
