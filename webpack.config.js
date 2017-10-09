@@ -1,10 +1,11 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-const DEBUG = !(process.argv.slice(2) == '--release');
-const VERBOSE = process.argv.slice(2) == '--verbose';
+const args = process.argv.slice(2)
+const DEBUG = !(args[0] === '--release')
+const VERBOSE = args[0] === '--verbose'
 
 /**
  * Webpack configuration (core/main.js => build/bundle.js)
@@ -35,7 +36,7 @@ const config = {
       'react-router-redux',
       'redux',
       'redux-thunk',
-    ]
+    ],
   },
 
   // Options affecting the output of the compilation
@@ -79,7 +80,7 @@ const config = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': DEBUG ? '"development"' : '"production"',
       __DEV__: DEBUG,
-      __BASENAME__: JSON.stringify(process.env.BASENAME || '')
+      __BASENAME__: JSON.stringify(process.env.BASENAME || ''),
     }),
     new ExtractTextPlugin(
       'assets/styles.css',
@@ -156,17 +157,17 @@ const config = {
       store: path.resolve(__dirname, './src/store/'),
     },
   },
-};
+}
 
 // Optimize the bundle in release (production) mode
 if (!DEBUG) {
-  config.plugins.push(new webpack.optimize.DedupePlugin());
+  config.plugins.push(new webpack.optimize.DedupePlugin())
   config.plugins.push(new webpack.optimize.UglifyJsPlugin({
     compress: { warnings: VERBOSE, screw_ie8: false },
     mangle: { screw_ie8: false },
     output: { screw_ie8: false },
-  }));
-  config.plugins.push(new webpack.optimize.AggressiveMergingPlugin());
+  }))
+  config.plugins.push(new webpack.optimize.AggressiveMergingPlugin())
   config.module.loaders
     .find(x => x.loader === 'babel-loader').query.plugins
     .unshift(
@@ -176,7 +177,7 @@ if (!DEBUG) {
     'transform-es3-modules-literals',
     'transform-es3-member-expression-literals',
     'transform-es3-property-literals'
-    );
+    )
 }
 
-module.exports = config;
+module.exports = config

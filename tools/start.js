@@ -56,15 +56,18 @@ task('start', () => new Promise(resolve => {
 
         // Serve index.html for all unknown requests
         (req, res, next) => {
-          const filename = path.join(bundler.outputPath, 'index.html')
-          bundler.outputFileSystem.readFile(filename, (err, result) => {
-            if (err) {
-              next(err)
-              return
-            }
-            res.setHeader('content-type', 'text/html')
-            res.end(result)
-          })
+          if (req.headers.accept.startsWith('text/html')) {
+            const filename = path.join(bundler.outputPath, 'index.html')
+            bundler.outputFileSystem.readFile(filename, (err, result) => {
+              if (err) {
+                next(err)
+                return
+              }
+              res.setHeader('Content-Type', 'text/html')
+              res.end(result)
+            })
+          }
+          next()
         },
       ],
     },
