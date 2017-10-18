@@ -46,7 +46,7 @@ module.exports = {
     // Transforms :not() W3C CSS Level 4 pseudo class to :not() CSS Level 3 selectors
     // https://github.com/postcss/postcss-selector-not
     require('postcss-selector-not')(),
-    // Add vendor prefixes to CSS rules using values from caniuse.com
+    // Parse CSS and add vendor prefixes to rules
     // https://github.com/postcss/autoprefixer
     require('autoprefixer')({ browsers: AUTOPREFIXER_BROWSERS }),
   ],
