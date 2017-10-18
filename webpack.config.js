@@ -116,7 +116,7 @@ const config = {
         test: /\.css/,
         loader: ExtractTextPlugin.extract(
           'style-loader',
-          'css-loader?-autoprefixer!postcss-loader'
+          'css-loader?-autoprefixer&modules=true&localIdentName=[local]!postcss-loader'
         ),
       },
       {

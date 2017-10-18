@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Counter from '../../../components/Counter'
+import Counter from 'components/Counter'
 
 export const CounterView = (props) => (
   <div>

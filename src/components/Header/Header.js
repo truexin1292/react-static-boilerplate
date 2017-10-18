@@ -4,7 +4,7 @@ import classes from './Header.css'
 
 export const Header = () => (
   <div>
-    <h1>React Redux Starter Kit</h1>
+    <h1>IE8 React Redux Starter Kit</h1>
     <IndexLink to="/" activeClassName={classes.activeRoute}>
       Home
     </IndexLink>

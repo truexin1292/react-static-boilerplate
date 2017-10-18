@@ -1,5 +1,4 @@
 /* eslint-disable no-undef */
-
 import { applyMiddleware, compose, createStore } from 'redux'
 import routerMiddleware from 'react-router-redux/lib/middleware'
 import thunk from 'redux-thunk'
