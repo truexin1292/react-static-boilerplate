@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Counter from '../../../components/Counter'
 
 export const CounterView = (props) => (
@@ -16,9 +17,9 @@ CounterView.defaultProps = {
 }
 
 CounterView.propTypes = {
-  counter: React.PropTypes.number,
-  doubleAsync: React.PropTypes.func,
-  increment: React.PropTypes.func,
+  counter: PropTypes.number,
+  doubleAsync: PropTypes.func,
+  increment: PropTypes.func,
 }
 
 export default CounterView

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classes from './Counter.css'
 
 export const Counter = (props) => (
@@ -21,9 +22,9 @@ export const Counter = (props) => (
 )
 
 Counter.propTypes = {
-  counter: React.PropTypes.number.isRequired,
-  doubleAsync: React.PropTypes.func.isRequired,
-  increment: React.PropTypes.func.isRequired,
+  counter: PropTypes.number.isRequired,
+  doubleAsync: PropTypes.func.isRequired,
+  increment: PropTypes.func.isRequired,
 }
 
 export default Counter
