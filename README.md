@@ -75,7 +75,7 @@ $ npm test
 
 React Router history [guides](https://github.com/ReactTraining/react-router/blob/v2.3.0/docs/guides/Histories.md).
 
-production web applications should use browserHistory for the cleaner URLs, and for support for server-side rendering, which is impossible with hashHistory.
+production web applications should use browserHistory for the cleaner URLs.
 
 ### How to Build
 
