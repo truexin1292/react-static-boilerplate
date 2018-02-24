@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 import React from 'react'
 import ReactDOM from 'react-dom'
-import createBrowserHistory from 'history/lib/createBrowserHistory'
+import createHashHistory from 'history/lib/createHashHistory'
 import { useRouterHistory } from 'react-router'
 import syncHistoryWithStore from 'react-router-redux/lib/sync'
 import createStore from './store/createStore'
@@ -11,7 +11,7 @@ import AppContainer from './containers/AppContainer'
 // ========================================================
 // Browser History Setup
 // ========================================================
-const browserHistory = useRouterHistory(createBrowserHistory)({
+const browserHistory = useRouterHistory(createHashHistory)({
   basename: __BASENAME__,
 })
 
