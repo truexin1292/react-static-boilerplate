@@ -21,11 +21,11 @@ const config = {
     app: [
       './main.js',
     ],
-    vendor: [
+    vendor: [ 
       'es5-shim',
       'es5-shim/es5-sham',
-      'es6-promise',
       'babel-polyfill',
+      'es6-promise',
       'fetch-detector',
       'fetch-ie8',
       'fetch-jsonp',
@@ -33,7 +33,6 @@ const config = {
       'react-dom',
       'react-redux',
       'react-router',
-      'react-router-redux',
       'redux',
       'redux-thunk',
     ],
