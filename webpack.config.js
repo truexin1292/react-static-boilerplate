@@ -163,11 +163,37 @@ const config = {
 // Optimize the bundle in release (production) mode
 if (!DEBUG) {
   config.plugins.push(new webpack.optimize.DedupePlugin())
-  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
-    compress: { warnings: VERBOSE, screw_ie8: false },
-    mangle: { screw_ie8: false },
-    output: { screw_ie8: false },
-  }))
+}
+
+// https://github.com/jun0205/react-static-boilerplate/issues/14
+// Must always Uglify somehow or it won't work in IE8
+const uglyOptions = !DEBUG ? {
+  compress: {
+    warnings: VERBOSE,
+    screw_ie8: false,
+  },
+  mangle: { screw_ie8: false },
+  output: { screw_ie8: false },
+} : {
+    mangle: false,
+    compress: {
+      drop_debugger: false,
+      warnings: VERBOSE,
+      screw_ie8: false,
+    },
+    output: {
+      beautify: true,
+      comments: true,
+      bracketize: true,
+      indent_level: 2,
+      keep_quoted_props: true,
+      screw_ie8: false,
+    },
+  }
+
+config.plugins.push(new webpack.optimize.UglifyJsPlugin(uglyOptions))
+
+if (!DEBUG) {
   config.plugins.push(new webpack.optimize.AggressiveMergingPlugin())
   config.module.loaders
     .find(x => x.loader === 'babel-loader').query.plugins
